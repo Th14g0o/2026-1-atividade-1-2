@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug: servidor_basico",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/servidor_basico",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "preLaunchTask": "build"
+    },
+    {
+      "name": "Debug: cliente_basico",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/cliente_basico",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "preLaunchTask": "build"
+    },
+    {
+      "name": "Debug: servidor_echo",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/servidor_echo",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "preLaunchTask": "build"
+    },
+    {
+      "name": "Debug: servidor_chat",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/servidor_chat",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "preLaunchTask": "build"
+    }
+  ]
+}
