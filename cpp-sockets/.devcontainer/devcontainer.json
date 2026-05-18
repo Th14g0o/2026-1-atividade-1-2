@@ -1,0 +1,43 @@
+{
+  "name": "cpp-sockets",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+
+  // Monta o workspace na raiz do projeto
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+
+  // Extensões do VS Code instaladas automaticamente
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",           // IntelliSense, debug, navegação C/C++
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cmake-tools",        // suporte a CMake (opcional, mas útil)
+        "twxs.cmake",                   // syntax highlight de CMakeLists
+        "ms-vscode.makefile-tools",     // integração com Makefile
+        "vadimcn.vscode-lldb"           // debugger alternativo (LLDB)
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "C_Cpp.default.cppStandard": "c++17",
+        "C_Cpp.default.compilerPath": "/usr/bin/g++",
+        "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4 }",
+        "makefile.makePath": "/usr/bin/make",
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  // Usuário padrão dentro do container
+  "remoteUser": "vscode",
+
+  // Comandos executados após o container estar pronto
+  "postCreateCommand": "make",
+
+  // Permite que o container acesse a rede do host —
+  // essencial para testar sockets entre terminais distintos
+  "runArgs": ["--network=host"]
+}
