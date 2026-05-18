@@ -8,10 +8,10 @@
   1. Praticar programação de linhas de execução servidor
   2. Conhecer como linguagens de programação implementam linhas de execução
   3. Conhecer Docker Compose
-    - **Introdução**: [Docker Docs - Sobre](https://docs.docker.com/compose/)
-    - **Como Compose Funciona**: [Docker Docs - How Compose works](https://docs.docker.com/compose/intro/compose-application-model/)
-    - **Instalação**: [Docker Docs - Overview of Installing](https://docs.docker.com/compose/install)
-    - **Tutorial de Uso**: [Docker Docs - QuickStart](https://docs.docker.com/compose/gettingstarted)
+     - **Introdução**: [Docker Docs - Sobre](https://docs.docker.com/compose/)
+     - **Como Compose Funciona**: [Docker Docs - How Compose works](https://docs.docker.com/compose/intro/compose-application-model/)
+     - **Instalação**: [Docker Docs - Overview of Installing](https://docs.docker.com/compose/install)
+     - **Tutorial de Uso**: [Docker Docs - QuickStart](https://docs.docker.com/compose/gettingstarted)
 - **Exemplo Python**: [Repositorio Git](https://github.com/sistemas-operacionais/python-sockets.git)
   
 ---
