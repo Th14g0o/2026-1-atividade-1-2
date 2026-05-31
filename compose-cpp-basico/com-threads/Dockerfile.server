@@ -1,0 +1,10 @@
+FROM gcc:13-bookworm
+
+WORKDIR /app
+COPY servidor.cpp .
+
+RUN g++ -std=c++17 -Wall -pthread -o server servidor.cpp
+
+EXPOSE 8080
+
+CMD ["./server"]

@@ -1,0 +1,12 @@
+FROM gcc:13-bookworm
+
+WORKDIR /app
+COPY cliente.cpp .
+
+RUN g++ -std=c++17 -Wall -pthread -o client cliente.cpp
+
+# CLIENT_ID é passado pelo docker-compose via environment
+ENV CLIENT_ID=cliente_desconhecido
+
+# Aguarda o servidor subir antes de conectar
+CMD sh -c "sleep 2 && ./client $CLIENT_ID"

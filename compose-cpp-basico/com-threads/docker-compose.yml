@@ -1,0 +1,145 @@
+networks:
+  app_net:
+    driver: bridge
+
+services:
+
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    container_name: server_thread
+    networks:
+      - app_net
+    ports:
+      - "9000:8080"
+
+  cliente_1:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_1_threads
+    environment:
+      - CLIENT_ID=cliente_1
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_2:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_2_threads
+    environment:
+      - CLIENT_ID=cliente_2
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_3:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_3_threads
+    environment:
+      - CLIENT_ID=cliente_3
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_4:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_4_threads
+    environment:
+      - CLIENT_ID=cliente_4
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_5:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_5_threads
+    environment:
+      - CLIENT_ID=cliente_5
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_6:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_6_threads
+    environment:
+      - CLIENT_ID=cliente_6
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_7:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_7_threads
+    environment:
+      - CLIENT_ID=cliente_7
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_8:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_8_threads
+    environment:
+      - CLIENT_ID=cliente_8
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_9:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_9_threads
+    environment:
+      - CLIENT_ID=cliente_9
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server
+
+  cliente_10:
+    build:
+      context: .
+      dockerfile: Dockerfile.cliente
+    container_name: cliente_10_threads
+    environment:
+      - CLIENT_ID=cliente_10
+      - SERVER_HOST=server_thread
+    networks:
+      - app_net
+    depends_on:
+      - server

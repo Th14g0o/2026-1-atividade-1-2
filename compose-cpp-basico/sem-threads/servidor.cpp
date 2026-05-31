@@ -48,7 +48,10 @@ int main() {
         return 1;
     }
 
-    std::cout << "Servidor aguardando conexoes na porta " << PORT << "...\n";
+    std::cout << "Servidor aguardando conexoes na porta "
+          << PORT
+          << "..."
+          << std::endl;
 
     while (true) {
         // Monta o conjunto de file descriptors para o select()
